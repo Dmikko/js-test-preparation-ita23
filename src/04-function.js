@@ -7,6 +7,9 @@
  * Usage:
  * const greetJack = greetUser("Jack"); // greetJack will be "Hello, Jack"
  */
+function greetUser(name) {
+     return "Hello, " + name;
+}
 
 
 
@@ -14,12 +17,16 @@
  * This function converts a string to spinal case.
  *
  * @param {string} str - The string to be converted.
- * @returns {string} - The spinal cased string. Should be lower case
+ * @returns {string} - The spinal cased string.
  *
  * Usage:
  * const spinal = toSpinalCase("This Is Spinal Tap"); // spinal will be "this-is-spinal-tap"
  */
-
+function toSpinalCase(str){
+    let spinalReplace = str.replace(/(?!^)([A-Z])/g, ' $1')
+        .replace(/[_\s]+(?=[a-zA-Z])/g, '-').toLowerCase();
+    return spinalReplace;
+}
 
 /**
  * This function calculates the time taken by light to travel a certain distance.
@@ -30,7 +37,14 @@
  * Usage:
  * const time = lightTravelTime(300000); // time will be 1
  */
+function lightTravelTime(distance){
+   let lightCalc = distance/300000;
+return lightCalc;
 
+/*
+ y(output)=x(input)/300000km
+*/
+}
 
 /**
  * This function checks if two words are mirror words.
@@ -44,7 +58,6 @@
  * const notMirror = mirrorWordCheck("hello", "world"); // notMirror will be false
  */
 function mirrorWordCheck(word1, word2) {
-
 }
 
 

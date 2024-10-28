@@ -9,7 +9,7 @@
  * console.log(lastElement); // 20
  */
 function getLastElement(array) {
-
+    return array[array.length-1];
 }
 
 
@@ -25,22 +25,33 @@ function getLastElement(array) {
  * // numbers will be [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  */
 function returnEvenNumbers(start, finish) {
-
+    let evenNumbers = []
+    for (let i = start; i <= finish; i++) {
+        if (i % 2 === 0) {
+           evenNumbers.push(i);
+        }
+    }
+    return evenNumbers;
 }
 
 
 /**
  * This function returns a new array with the square of each number from the input array.
  *
- * @param {number[]} array - Array of numbers.
+ * @param {number[]} array1 - Array of numbers.
  * @returns {number[]} - Array with the square of each number.
  *
  * Usage:
  * const squares = squareArray([1, 2, 3]); // squares will be [1, 4, 9]
  * const anotherSquares = squareArray([-1, -2, 3]); // anotherSquares will be [1, 4, 9]
  */
-function squareArray(array) {
-
+function squareArray(array1) {
+    const squauredNumbers = []
+ for (let i = 0; i < array1.length; i++) {
+     let squared = array1[i] * array1[i];
+     squauredNumbers.push(squared);
+ }
+ return squauredNumbers;
 }
 
 /**
@@ -54,9 +65,15 @@ function squareArray(array) {
  * const anotherMax = findMax([-1, -2, 3]); // anotherMax will be 3
  */
 function findMax(array) {
+    let maxNumber = array[0];
 
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > maxNumber) {
+            maxNumber = array[i];
+        }
+    }
+    return maxNumber;
 }
-
 
 /**
  * This function calculates the sum of elements at odd indices in an array.
@@ -69,5 +86,10 @@ function findMax(array) {
  * const anotherSumOdd = sumOddIndices([1, 3, 5, 7]); // anotherSumOdd will be 10 (3 + 7)
  */
 function sumOddIndices(arr) {
+    let sumOdd = 0;
 
-}
+    for (let i = 1; i < arr.length; i+=2) {
+        sumOdd += arr[i];
+        }
+    return sumOdd;
+    }

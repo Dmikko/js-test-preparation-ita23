@@ -1,14 +1,19 @@
 /**
  * This function returns a simple object representing a book.
  *
- * @returns {object} - An object with properties: title (should be a string), author (should be a string), and year(should be a number).
+ * @returns {object} - An object with properties: title, author, and year.
  *
  * Usage:
  * const myBook = createBook();
  * console.log(myBook.title); // Outputs the title of the book
  */
 function createBook() {
-
+let book = {
+    title:"1984",
+    author:"George Orwell",
+    year: 1949
+};
+return book;
 }
 
 
